@@ -46,12 +46,22 @@ $ vim .env
 
 ## 启动程序
 
+
+
 直接运行脚本文件`start.sh`
 
 - 进入项目目录
 
 ```bash
 $ cd clash-for-linux
+```
+
+- 修改启动脚本
+```
+# 增加变量 填入你的订阅地址
+CLASH_URL="https://xn--1.xn--1/forest/?token=1"
+# 将 CLASH_URL 变量的值赋给 URL 变量，并检查 CLASH_URL 是否为空
+URL=${CLASH_URL:?Error: CLASH_URL variable is not set or empty}
 ```
 
 - 运行启动脚本
